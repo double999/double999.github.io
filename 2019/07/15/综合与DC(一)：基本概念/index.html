@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="EDA，综合,">
 
 
 
@@ -79,16 +79,23 @@
 
 
 
-<meta name="description" content="说时光，诉流年。希望在这里能给未来的自己一份礼物！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="博观约取，厚积薄发">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="​    写一个系列吧，从综合与DC写起，算是前端的一部分。后边会跟上后端，以及前端的一些经典电路、模块的设计，EDA工具的使用。">
+<meta name="keywords" content="EDA，综合">
+<meta property="og:type" content="article">
+<meta property="og:title" content="综合与DC(一)：基本概念">
+<meta property="og:url" content="http://yoursite.com/2019/07/15/综合与DC(一)：基本概念/index.html">
 <meta property="og:site_name" content="博观约取，厚积薄发">
-<meta property="og:description" content="说时光，诉流年。希望在这里能给未来的自己一份礼物！">
+<meta property="og:description" content="​    写一个系列吧，从综合与DC写起，算是前端的一部分。后边会跟上后端，以及前端的一些经典电路、模块的设计，EDA工具的使用。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/DC-overview1.png">
+<meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/DC3.png">
+<meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/DC2.png">
+<meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/DC读入文件.png">
+<meta property="og:updated_time" content="2019-07-15T13:20:54.316Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="博观约取，厚积薄发">
-<meta name="twitter:description" content="说时光，诉流年。希望在这里能给未来的自己一份礼物！">
+<meta name="twitter:title" content="综合与DC(一)：基本概念">
+<meta name="twitter:description" content="​    写一个系列吧，从综合与DC写起，算是前端的一部分。后边会跟上后端，以及前端的一些经典电路、模块的设计，EDA工具的使用。">
+<meta name="twitter:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/DC-overview1.png">
 
 
 
@@ -118,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/15/综合与DC(一)：基本概念/">
 
 
 
 
 
-  <title>博观约取，厚积薄发</title>
+  <title>综合与DC(一)：基本概念 | 博观约取，厚积薄发</title>
   
 
 
@@ -143,8 +150,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -279,9 +285,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -311,9 +317,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/15/综合与DC(一)：基本概念/" itemprop="url">综合与DC(一)：基本概念</a></h1>
+          <h1 class="post-title" itemprop="name headline">综合与DC(一)：基本概念</h1>
         
 
         <div class="post-meta">
@@ -406,19 +410,66 @@
       
 
       
-        
-          <p>​    写一个系列吧，从综合与DC写起，算是前端的一部分。后边会跟上后端，以及前端的一些经典电路、模块的设计，EDA工具的使用。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/07/15/综合与DC(一)：基本概念/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>​    写一个系列吧，从综合与DC写起，算是前端的一部分。后边会跟上后端，以及前端的一些经典电路、模块的设计，EDA工具的使用。<a id="more"></a></p>
+<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h1><p>​    现在的电路规模已经达到百万门、千万门，SOC更甚之。人力在这种规模面前显得就太苍白渺小了，所以EDA工具在现代集成电路设计流程中有着举足轻重的作用。电路设计人员主要面向的还是EDA的使用，而不是底层的优化算法、调度控制等等。</p>
+<p>​    本科的时候，学过一些EDA工具的使用，vcs、dc、ICC、PT、SPICE等（吹爆强哥）。但由于当时知识和动手能力的局限性，只是流于皮毛，大概知道了每个工具是做什么的，没有在具体的设计中深入研究、使用过。上学期，课程设计有机会从前到后都跑了一遍。最近，在看论文之余，希望能借助一些书、一些大牛博客以及厂商给的workshop，再把重点强化一些，把精细化分工的各个环节再过一遍。</p>
+<h1 id="2-逻辑综合概述"><a href="#2-逻辑综合概述" class="headerlink" title="2. 逻辑综合概述"></a>2. 逻辑综合概述</h1><p>​    基本的综合可以用一个等式来表达：synthesis = translation + logic optimization + gate mapping。</p>
+<p>​    下面通过三张图来整体把握以下DC在IC设计中所处的环节、以及主要完成的工作。</p>
+<h2 id="2-1-图1"><a href="#2-1-图1" class="headerlink" title="2.1 图1"></a>2.1 图1</h2><p><img src="https://double-image.oss-cn-beijing.aliyuncs.com/DC-overview1.png" alt="DC1"></p>
+<ol>
+<li>设计之前，准备好库、HDL代码的思想、约束生成；然后根据设计思想用 RTL 源码详细地、完整地为设计建立模型、定义设计中寄存器结构和数目、定义设计中的组合电路功能、定义设计中寄存器时钟等等的设计规格和实现。</li>
+<li>完成 RTL 源码设计之后,应让设计开发与功能仿真并行进行.<ul>
+<li>在设计开发阶段,我们使用 DC 来实现特定的设计目标(设计规则和优化约束),以及执行默认选项的初步综合.</li>
+<li>如果设计开发结果未能在 10%的偏差范围内满足时序目标,则需要修正 HDL 代码,然后重复设计开发和功能验证的过程</li>
+<li>在功能仿真中,通过特定的工具来确定设计是否能按如所需的功能工作</li>
+<li>如果设计未能满足功能要求,  我们必须修改设计代码以及重复设计开发和功能仿真. 继续设计开发和功能仿真直至设计功能正确及满足小于 10%偏差的时序目标.</li>
+</ul>
+</li>
+<li>使用 DC 完成设计的综合并满足设计目标.这个过程包括三个步骤，即综合=转化+逻辑优化+映射，首先将 RTL 源代码转化为通用的布尔等式，然后设计的约束对电路进行逻辑综合和优化，使电路能满足设计的目标或者约束，最后使用目标工艺库的逻辑单元映射成门级网表，在将设计综合成门级网表之后,要验证此时的设计是否满足设计目标.如果不能满足设计目标,此时需要产生及分析报告确定问题及解决问题.</li>
+<li>当设计满足功能、时序以及其他的设计目标的时候,需要执行物理层设计最后分析物理层设计的性能，也就是使用DC的拓扑模式，加入floorplan的物理信息后进行综合分析设计的性能。如果结果未能满足设计目标,应返回第三步.如果满足设计目标,则本部分设计周期完成.</li>
+</ol>
+<h2 id="2-2-图2"><a href="#2-2-图2" class="headerlink" title="2.2 图2"></a>2.2 图2</h2><p><img src="https://double-image.oss-cn-beijing.aliyuncs.com/DC3.png" alt="DC3"></p>
+<p>​    图2将图1中DC内的部分细化。在综合的时候，首先DC的HDL compiler把HDL代码转化成DC自带的<strong>GTECH</strong>格式，然后DC的<strong>library compiler</strong> 根据标准设计约束（SDC）文件、IP-DW库、工艺库、图形库、（使用拓扑模式时，还要加入ICC生成的DEF模式，加载物理布局信息）进行<strong>时序优化、数据通路优化、功耗优化（DC的power compiler进行）、测试的综合优化（DC的DFT compiler）</strong>，最后得到优化后的网表。</p>
+<h2 id="2-3-图3"><a href="#2-3-图3" class="headerlink" title="2.3 图3"></a>2.3 图3</h2><p><img src="https://double-image.oss-cn-beijing.aliyuncs.com/DC2.png" alt="DC2"></p>
+<p>​    图三为DC内部的综合流程图，以及相应的一些命令</p>
+<h3 id="2-3-1-准备设计文件，coding工作。"><a href="#2-3-1-准备设计文件，coding工作。" class="headerlink" title="2.3.1 准备设计文件，coding工作。"></a>2.3.1 准备设计文件，coding工作。</h3><h3 id="2-3-2-指定库文件、工作目录等。-补充命令示例"><a href="#2-3-2-指定库文件、工作目录等。-补充命令示例" class="headerlink" title="### 2.3.2 指定库文件、工作目录等。==补充命令示例=="></a>### 2.3.2 指定库文件、工作目录等。==补充命令示例==</h3><p>指定库文件，需要指定的库文件包括：链接库（link library） 、目标库（target library） 、符号库（symbol library）、综合库（synthetic library）</p>
+<ul>
+<li><p><strong>Link library &amp; target library</strong>。Link  library 和 target  library 统称为 <strong>technology  library</strong>（即工艺库，习惯称之为综合库），technology  library  由半导体制造商提供，包含相关 cell 的信息及设计约束标准，其中：Target library: 在门级优化及映射的时候提供生成网表的 cell,即DC 用于创建实际电路的库。 Link library:  提供设计网表中的 cell，可以跟target_library使用同一个库，但是 DC 不用 link library中的 cell 来综合设计。当 DC 读入设计时，它自动读入由 link library 变量指定的库。当连接设计时，DC 先搜寻其内存中已经有的库，然后在搜寻由 link  library 指定的库。</p>
+<blockquote>
+<p><strong>注</strong>：当读入的文件是门级网表时，需要把 link library 指向生成该门级网表的库文件，否则 DC 因不知道网表中门单元电路的功能而报错。</p>
+</blockquote>
+</li>
+<li><p><strong>Symbol library</strong>.Symbol library 提供 Design Vision GUI 中设计实现的图形符号，如果你使用脚本模式而不使用 GUI,此库可不指定 Symbol library</p>
+</li>
+<li><p><strong>Synthetic library</strong>。即为 Designware library ,名字上翻译是综合库，但却常称之为IP库，而不是直译。特殊的 Designware library 是需要授权的（比如使用多级流水线的乘法器），默认的标准 Designware 由 DC 软件商提供，无需指定。</p>
+</li>
+<li><p><strong>Create_mw_lib</strong> :主要使用DC的物理综合的时候，需要生成物理库</p>
+</li>
+</ul>
+<h3 id="2-3-3-读入设计。"><a href="#2-3-3-读入设计。" class="headerlink" title="2.3.3 读入设计。"></a>2.3.3 读入设计。</h3><p>设计的读入过程是将设计文件载入内存，并将其转换为 DC 的中间格式,即GTECH 格式，GTECH 格式由“soft macros”  如  adders, comparators 等组成，这些组件来自 synopsys  的 synthetic lib，每种组件具有多种结构。读入设计有两种实现方法实现方法：<strong>read</strong>  和 <strong>analyze &amp; elaborate</strong>（实际上read 是 analyze  与  elaborate 的打包操作  ）。两种的主要区别如下表：</p>
+<p><img src="https://double-image.oss-cn-beijing.aliyuncs.com/DC读入文件.png" alt="读入"></p>
+<p>从中可以看到，analyze &amp; elaborate  可以自由指定设计库，并生成 GTECH中间文件前生成.syn 文件存储于 work 目录下，便于下次 elaborate 节省时间，一般选择 analyze &amp; elaborate 的方法读入设计。</p>
+<h3 id="2-3-4-定义设计环境。"><a href="#2-3-4-定义设计环境。" class="headerlink" title="2.3.4 定义设计环境。"></a>2.3.4 定义设计环境。</h3><p>定义对象包括工艺参数（温度、电压等），I/O 端口属性（负载、驱动、扇出），统计 wire-load 模型，设计环境将影响设计综合及优化结果。这一步主要是针对库的选择。</p>
+<blockquote>
+<p>这里的wire load model是根据自己设计的规模自己选定的，并没有后端布线的真实情况。所以并不会很准确。</p>
+</blockquote>
+<h3 id="2-3-5-定义设计约束。"><a href="#2-3-5-定义设计约束。" class="headerlink" title="2.3.5 定义设计约束。"></a>2.3.5 定义设计约束。</h3><p>包括设计规则约束和优化约束，设计规则约束（design  rule constraint）由工艺库决定，在设计编译过程中必须满足，用于使电路能按功能要求正常工作。设计优化约束定义了 DC 要达到的时序和面积优化目标，该约束由用户指定，DC 在不违反设计规则约束的前提下，遵循此约束综合设计。</p>
+<h3 id="2-3-6-选择编译策略。"><a href="#2-3-6-选择编译策略。" class="headerlink" title="2.3.6 选择编译策略。"></a>2.3.6 选择编译策略。</h3><p>对于层次化设计，DC 中有两种编译策略供选择，分别为 <strong>top down</strong> 和 <strong>bottom up</strong>。在 top down 策略中，顶层设计和子设计在一起编译，所有的环境和约束设置针对顶层设计，虽然此种策略自动考虑到相关的内部设计，但是此种策略不适合与大型设计，因为 top down 编译策略中，所有设计必须同时驻内存，硬件资源耗费大。在 bottom up 策略中，子设计单独约束，当子设计成功编译后，被设置为 dont_touch 属性，防止在之后的编译过程中被修改，所有同层子设计编译完成后，再编译之上的父设计，直至顶层设计编译完成。Bottom  up 策略允许大规模设计，因为该策略不需要所有设计同时驻入内存。</p>
+<h3 id="2-3-7-编译"><a href="#2-3-7-编译" class="headerlink" title="2.3.7 编译"></a>2.3.7 编译</h3><p>用 Compile 命令执行综合与优化过程，还可以利用一些选项指导编译和优化过程。</p>
+<h3 id="2-3-8-分析及解决设计中存在的问题"><a href="#2-3-8-分析及解决设计中存在的问题" class="headerlink" title="2.3.8 分析及解决设计中存在的问题"></a>2.3.8 分析及解决设计中存在的问题</h3><p>DC  可以产生一些报告以反映设计的综合和优化结果，如：时序、面积、约束等报告，这些报告有助于分析和解决设计中存在的问题以改善综合结果，我们还可以利用 check_design 命令检验综合的设计的一致性。</p>
+<h3 id="2-3-9-导出设计数据"><a href="#2-3-9-导出设计数据" class="headerlink" title="2.3.9 导出设计数据"></a>2.3.9 导出设计数据</h3><p>DC 不会自动存储综合后的设计结果，因而需要在离开 DC 时手动存储设计数据。比如存储网表、延时信息等数据文件。</p>
+<h2 id="3-Reference"><a href="#3-Reference" class="headerlink" title="3. Reference"></a>3. Reference</h2><p>[1]：<a href="https://www.cnblogs.com/IClearner/p/6618992.html" target="_blank" rel="noopener">Tcl与Design Compiler （三）——DC综合的流程</a></p>
+<p>基本概念都是来自这位同行的说法，只是对一些地方加了些自己的见解。下一篇中会补充上自己原来综合用的脚本。</p>
+
       
-    </p></div>
+    </div>
     <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #636363;font-size:14px;letter-spacing: 10px">本文结束啦<i class="fa fa-bell"></i>感谢您的阅读</div>
+    
+</div>
   
   </div>
     
@@ -429,359 +480,58 @@
 
     
 
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Shining Star
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/07/15/综合与DC(一)：基本概念/" title="综合与DC(一)：基本概念">http://yoursite.com/2019/07/15/综合与DC(一)：基本概念/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/14/博客图床搭建/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shining Star">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/love_head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="博观约取，厚积薄发">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/14/博客图床搭建/" itemprop="url">博客图床搭建</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-14T09:50:00+08:00">
-                2019-07-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具使用/" itemprop="url" rel="index">
-                    <span itemprop="name">工具使用</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/EDA，综合/" rel="tag"><i class="fa fa-tag"></i> EDA，综合</a>
           
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/07/14/博客图床搭建/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/14/博客图床搭建/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/07/14/博客图床搭建/" class="leancloud_visitors" data-flag-title="博客图床搭建">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-		
+      
       
       
 
       
-        
-          <p>​    因为<a href="http://yoursite.com/2019/03/21/hexo入坑-图片上传/">上次</a>申请的七牛云存储空间是一个测试域名，一定时长后，域名就给失效了，所以原来博客里边素的没有一张图了（<del>虽然一共也没有几篇博客</del>）。因为不能上图，所以博客停更了几个月，这次趁着有时间，回来又申请了一个阿里云的OSS，这次主要记录一下图床的搭建吧！
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/07/14/博客图床搭建/" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/14/博客图床搭建/" rel="next" title="博客图床搭建">
+                <i class="fa fa-chevron-left"></i> 博客图床搭建
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    <div>
-  
-  </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/15/公钥加密基本概念（一）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shining Star">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/love_head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="博观约取，厚积薄发">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/15/公钥加密基本概念（一）/" itemprop="url">公钥加密基本概念（一）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-15T19:56:48+08:00">
-                2019-04-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/公钥密码学/" itemprop="url" rel="index">
-                    <span itemprop="name">公钥密码学</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/04/15/公钥加密基本概念（一）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/15/公钥加密基本概念（一）/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/04/15/公钥加密基本概念（一）/" class="leancloud_visitors" data-flag-title="公钥加密基本概念（一）">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-		
-      
       
 
       
-        
-          <h1 id="公钥密码学"><a href="#公钥密码学" class="headerlink" title="公钥密码学"></a>公钥密码学</h1><p>参考知乎文章<a href="https://zhuanlan.zhihu.com/p/45958608" target="_blank" rel="noopener">《公钥密码学》</a></p>
-<p>​    当代密码学的核心是公钥密码学。我们先来聊聊公钥密码学的定义，然后介绍一下它的两大应用，最后简要介绍一下两个公钥密码学的算法。Peter 写本文的目的是梳理清楚学习密码学的大思路，以便在看文档的时候，遇到椭圆曲线，RSA ，加密通信，数字签名这些术语的时候，起码知道它们的大致归属。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/04/15/公钥加密基本概念（一）/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    <div>
-  
-  </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -791,520 +541,11 @@
   </article>
 
 
-    
+
+    <div class="post-spread">
       
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/09/实习生/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shining Star">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/love_head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="博观约取，厚积薄发">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/09/实习生/" itemprop="url">实习生</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-09T20:41:51+08:00">
-                2019-04-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/杂谈/" itemprop="url" rel="index">
-                    <span itemprop="name">杂谈</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/04/09/实习生/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/09/实习生/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/04/09/实习生/" class="leancloud_visitors" data-flag-title="实习生">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-		
-      
-      
-
-      
-        
-          <p>​    最近一直都没有更新，一方面杂事太多，一方面心情太差，被一些事情折磨得感觉每分钟都很煎熬。不说这些了，说自己的新身份：实习生。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/04/09/实习生/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    <div>
-  
+    </div>
   </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/21/hexo入坑-图片上传/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shining Star">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/love_head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="博观约取，厚积薄发">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/21/hexo入坑-图片上传/" itemprop="url">hexo入坑-图片上传</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-21T11:01:47+08:00">
-                2019-03-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具使用/" itemprop="url" rel="index">
-                    <span itemprop="name">工具使用</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/21/hexo入坑-图片上传/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/21/hexo入坑-图片上传/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/03/21/hexo入坑-图片上传/" class="leancloud_visitors" data-flag-title="hexo入坑-图片上传">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-		
-      
-      
-
-      
-        
-          <p>​    这两天对markdown有点着魔，连做学习笔记都在用Typora写markdown了。本来，Typora插入图片是很方便的，可是偏偏自己还又入了hexo的坑。单纯的用Typora写文章的话，无论插入本地图片还是网络图片都是没问题的，如果需要hexo生成html的话，本地图片上传就会出现一些“坑”。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/03/21/hexo入坑-图片上传/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    <div>
-  
-  </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/19/开“更”大吉/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shining Star">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/love_head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="博观约取，厚积薄发">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/19/开“更”大吉/" itemprop="url">开“更”大吉</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-19T21:31:57+08:00">
-                2019-03-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/杂谈/" itemprop="url" rel="index">
-                    <span itemprop="name">杂谈</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/19/开“更”大吉/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/19/开“更”大吉/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/03/19/开“更”大吉/" class="leancloud_visitors" data-flag-title="开“更”大吉">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-		
-      
-      
-
-      
-        
-          <h1 id="我的个人博客"><a href="#我的个人博客" class="headerlink" title="我的个人博客"></a>我的个人博客</h1><p>​    从今天起，本站就作为本人的个人博客使用啦。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/03/19/开“更”大吉/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    <div>
-  
-  </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -1312,6 +553,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -1332,8 +580,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1423,6 +680,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-前言"><span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-逻辑综合概述"><span class="nav-text">2. 逻辑综合概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-图1"><span class="nav-text">2.1 图1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-图2"><span class="nav-text">2.2 图2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-图3"><span class="nav-text">2.3 图3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-准备设计文件，coding工作。"><span class="nav-text">2.3.1 准备设计文件，coding工作。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-指定库文件、工作目录等。-补充命令示例"><span class="nav-text">### 2.3.2 指定库文件、工作目录等。==补充命令示例==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-3-读入设计。"><span class="nav-text">2.3.3 读入设计。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-4-定义设计环境。"><span class="nav-text">2.3.4 定义设计环境。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-5-定义设计约束。"><span class="nav-text">2.3.5 定义设计约束。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-6-选择编译策略。"><span class="nav-text">2.3.6 选择编译策略。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-7-编译"><span class="nav-text">2.3.7 编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-8-分析及解决设计中存在的问题"><span class="nav-text">2.3.8 分析及解决设计中存在的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-9-导出设计数据"><span class="nav-text">2.3.9 导出设计数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Reference"><span class="nav-text">3. Reference</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1631,6 +904,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
