@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="密码算法，硬件攻防,">
 
 
 
@@ -79,16 +79,30 @@
 
 
 
-<meta name="description" content="说时光，诉流年。希望在这里能给未来的自己一份礼物！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="博观约取，厚积薄发">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="​    最近参加了一个侧信道攻防相关的培训，写一个系列来总结记录一下。知识比较碎片化，在整理的时候力求能系统一点，但是重点还是放在自己的一些理解与体会上。">
+<meta name="keywords" content="密码算法，硬件攻防">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SCA：简单能量分析攻击">
+<meta property="og:url" content="http://yoursite.com/2019/08/19/SCA：简单能量分析攻击/index.html">
 <meta property="og:site_name" content="博观约取，厚积薄发">
-<meta property="og:description" content="说时光，诉流年。希望在这里能给未来的自己一份礼物！">
+<meta property="og:description" content="​    最近参加了一个侧信道攻防相关的培训，写一个系列来总结记录一下。知识比较碎片化，在整理的时候力求能系统一点，但是重点还是放在自己的一些理解与体会上。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/20190819215930.png">
+<meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/20190819221645.png">
+<meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/20190819222229.png">
+<meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/20190820200758.png">
+<meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/20190820132352.png">
+<meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/20190820132315.png">
+<meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/20190820200859.png">
+<meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/20190820195132.png">
+<meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/20190820200123.png">
+<meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/20190820200016.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/19/SCA：简单能量分析攻击/images/1566303794575.png">
+<meta property="og:updated_time" content="2019-08-20T12:48:35.188Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="博观约取，厚积薄发">
-<meta name="twitter:description" content="说时光，诉流年。希望在这里能给未来的自己一份礼物！">
+<meta name="twitter:title" content="SCA：简单能量分析攻击">
+<meta name="twitter:description" content="​    最近参加了一个侧信道攻防相关的培训，写一个系列来总结记录一下。知识比较碎片化，在整理的时候力求能系统一点，但是重点还是放在自己的一些理解与体会上。">
+<meta name="twitter:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/20190819215930.png">
 
 
 
@@ -118,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/19/SCA：简单能量分析攻击/">
 
 
 
 
 
-  <title>博观约取，厚积薄发</title>
+  <title>SCA：简单能量分析攻击 | 博观约取，厚积薄发</title>
   
 
 
@@ -143,8 +157,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -279,9 +292,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -311,9 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/19/SCA：简单能量分析攻击/" itemprop="url">SCA：简单能量分析攻击</a></h1>
+          <h1 class="post-title" itemprop="name headline">SCA：简单能量分析攻击</h1>
         
 
         <div class="post-meta">
@@ -406,19 +417,73 @@
       
 
       
-        
-          <p>​    最近参加了一个侧信道攻防相关的培训，写一个系列来总结记录一下。知识比较碎片化，在整理的时候力求能系统一点，但是重点还是放在自己的一些理解与体会上。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/08/19/SCA：简单能量分析攻击/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>​    最近参加了一个侧信道攻防相关的培训，写一个系列来总结记录一下。知识比较碎片化，在整理的时候力求能系统一点，但是重点还是放在自己的一些理解与体会上。<a id="more"></a></p>
+<h1 id="1-理论理解"><a href="#1-理论理解" class="headerlink" title="1. 理论理解"></a>1. 理论理解</h1><h2 id="1-1-侧信道"><a href="#1-1-侧信道" class="headerlink" title="1.1 侧信道"></a>1.1 侧信道</h2><p>​    所有的敏感密码算法最终都是跑在实际的物理机器上的。既然是运行在实际的物理机器上，那就会不可避免和物理世界产生一些交互。侧信道攻击指的就是通过这些物理泄露来获取密钥信息。相比于密码学（偏数学分析）分析攻击，这种攻击方法的效率大大提高。在近年来已经取得了很多成果。<del>比如系里的XX老师就常年把曾经攻破XX城市的智能交通卡挂在嘴边。</del>侧信道信息的泄露面基本有下图几种，但不是每种信息都会对应到一个特定的攻击方法。比如，我们采集到的功耗信息、或者电磁辐射信息其实都是内部电路运行状态的直接反映，采集到的波形，可以用同一种方法来进行分析。（比如简单能量分析、相关能量分析等等）这些将在后边的例子中有一些体现。</p>
+<p>​    <img src="https://double-image.oss-cn-beijing.aliyuncs.com/20190819215930.png" alt="泄露面"></p>
+<h2 id="1-2-简单能量分析攻击SPA"><a href="#1-2-简单能量分析攻击SPA" class="headerlink" title="1.2 简单能量分析攻击SPA"></a>1.2 简单能量分析攻击SPA</h2><p>​    区别与差分能量分析攻击（后边会讲），没有或者不利用不同密钥输入得到的信息来去比对、确认之类的操作。说白一点，就是把能量轨迹显示出来，用眼睛“看”。如下图，DES算法的软件实现中，做能量轨迹分析，可以清楚的看到16轮的加密的过程。</p>
+<p><img src="https://double-image.oss-cn-beijing.aliyuncs.com/20190819221645.png" alt="示意"></p>
+<p>这种攻击一般会有以下几个假设：</p>
+<blockquote>
+<ol>
+<li>攻击者可以驱动被攻击设备至少一次加密（或者解密，密钥要可以参与运算）。</li>
+<li>采集设备加密过程中的能量波形</li>
+<li>找到感兴趣的某个操作在波形上的准确位置。</li>
+<li>密钥信息能够体现在这个操作的不同波形上，即不同操作的波形对比要明显一些。</li>
+</ol>
+</blockquote>
+<p><strong>优点</strong>：不需要太多的能量轨迹</p>
+<p><strong>缺点</strong>：1. 需要泄露比较明显，适合那种简单的软件平台的实现（MCU、CPU）。毕竟现在很多密码算法在实现过程中都考虑了硬件固化，侧信道防护。但凡安全级别高一点的，就很难满足这个条件。2. 对噪声比较敏感。</p>
+<h1 id="2-攻击实验"><a href="#2-攻击实验" class="headerlink" title="2. 攻击实验"></a>2. 攻击实验</h1><h2 id="2-1-目标算法：DES中的置换操作"><a href="#2-1-目标算法：DES中的置换操作" class="headerlink" title="2.1 目标算法：DES中的置换操作"></a>2.1 目标算法：DES中的置换操作</h2><p>​    DES中有一个步骤是将56bits的密钥做PC-1置换。如下图，假如输入为A，根据算法定义（规定），将A中的bit填到B中的固定位置。</p>
+<p>​    <img src="https://double-image.oss-cn-beijing.aliyuncs.com/20190819222229.png" alt></p>
+<p>​    上述置换，一个程序员的典型软件实现思路应该是这样的：</p>
+<blockquote>
+<ol>
+<li>把 B 清 0</li>
+<li>把A中的比特编号进行56次循环：<ul>
+<li>如果A[i]=0，则什么都不做。<strong>跳转</strong>（因为B已经初始化，节省一个数据移动操作）</li>
+<li>如果A[i]=1，则查表得知这个1在B中的去向，并写入B相应的位置。（不跳，执行下一条的写操作）</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<p>​    上述伪代码的软件实现可以清楚观测出芯片内部正在运行什么操作。进而直接恢复原始密钥A的值。上述代码如果拿汇编写的话，可以对应如下:</p>
+<p><img src="https://double-image.oss-cn-beijing.aliyuncs.com/20190820200758.png" alt></p>
+<h2 id="2-2-目标待攻击平台"><a href="#2-2-目标待攻击平台" class="headerlink" title="2.2 目标待攻击平台"></a>2.2 目标待攻击平台</h2><p>算法运行平台：AT89S52</p>
+<p>12M晶振，即时钟12M，但是因为平台特点，一个指令周期需要12个cycles，所以一个指令周期的时间大约为1位秒。</p>
+<blockquote>
+<p>实际的攻击场景，是可以满足这个对待攻击平台具体硬件参数了解的条件的。</p>
+</blockquote>
+<h2 id="2-3-攻击步骤"><a href="#2-3-攻击步骤" class="headerlink" title="2.3 攻击步骤"></a>2.3 攻击步骤</h2><h3 id="建模板观察"><a href="#建模板观察" class="headerlink" title="建模板观察"></a>建模板观察</h3><p>根据上述的攻击假设，我们是有机会拿到空白的硬件设备，并且写入明文和密钥的。这一步写入特定的密钥，观察芯片在执行上述置换操作时，跳转与不跳转写入的能量波形区别。如下图，设置示波器的一些显示参数，(示波器可以设置采集窗口，这一窗口可以通过另一个通道加入，激励来源可以是攻击者操作过的加密平台)，通过示波器采集到的能量波形如下图所示：其中红色为实时采集波形，蓝色为示波器的trigger波形，可以理解为采样窗口。黑色线条为经过示波器数字滤波求平均后的波形。</p>
+<p><img src="https://double-image.oss-cn-beijing.aliyuncs.com/20190820132352.png" alt="原始波形"></p>
+<p>观察上图中经过均值滤波后的黑色曲线，可得出如下图中的规律。</p>
+<p><img src="https://double-image.oss-cn-beijing.aliyuncs.com/20190820132315.png" alt="分类分析"></p>
+<p>既然我们可以认为写入密钥，那就可以先把前两个bit写个01试试，结合上图得出的规律，我们只需要把0和1对应上就可以，如下图：</p>
+<p><img src="https://double-image.oss-cn-beijing.aliyuncs.com/20190820200859.png" alt></p>
+<p><img src="https://double-image.oss-cn-beijing.aliyuncs.com/20190820195132.png" alt></p>
+<p>假如，前两个bit 01是用来建立模板，观察相应操作对应波形的，那么就可以确认：四小对应跳转，两小一中对应不跳转，一大一小对应写入。</p>
+<h3 id="密钥破解"><a href="#密钥破解" class="headerlink" title="密钥破解"></a>密钥破解</h3><p>通过上述分析就可以得出后续波形分别对应的是什么操作，进而能恢复出每个bit的信息来。当获得真实的加密设备后，能量波形对应微操作，微操作对应密钥，攻击的目的也就达到了。</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>能量波形的采集方法除了上述的是直接在芯片的电源输入端串接电阻外，还可以用线圈来采集电磁泄露信息，进而得到能量波形。如下图：</p>
+<p><img src="https://double-image.oss-cn-beijing.aliyuncs.com/20190820200123.png" alt></p>
+<p><img src="https://double-image.oss-cn-beijing.aliyuncs.com/20190820200016.png" alt></p>
+<p>显然，通过电磁信息泄露采集能量波形，对客观环境要求比较严格。这个比较简单，也能直接恢复出来。但是考虑复杂情况的话，不仅容易收到周围电磁场的干扰，而且还需要做电磁泄漏的空间定位（线圈放在哪里）等等。</p>
+<h1 id="3-简单能量分析攻击的其他示例"><a href="#3-简单能量分析攻击的其他示例" class="headerlink" title="3 简单能量分析攻击的其他示例"></a>3 简单能量分析攻击的其他示例</h1><h2 id="3-1-RSA算法的简单能量分析"><a href="#3-1-RSA算法的简单能量分析" class="headerlink" title="3.1 RSA算法的简单能量分析"></a>3.1 RSA算法的简单能量分析</h2><p>RSA算法中，密钥参与的有一个运算是幂方运算，密钥就是幂方，底数可以看作消息。幂方运算采用的快速算法是下图右半部分的算法。即幂方的比特形式，一位一位的去算。</p>
+<p><img src="images/1566303794575.png" alt="1566303794575"></p>
+<p>因为这个密钥bit 0和1的差异，为了高效实现，当为0时，是可以少一个乘运算的。而且硬件电路中专门有平方运算的优化，所以平方和乘运算，所对应的微操作，可以认为是不同的。这样我们就可以通过能量波形来判断微操作的类型，进而判断密钥是什么。</p>
+<p>类似的案例还有很多。</p>
+<h1 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h1><h2 id="不可避免"><a href="#不可避免" class="headerlink" title="不可避免"></a>不可避免</h2><p><strong>洛卡尔物质交换定律</strong>： 犯罪行为人只要实施犯罪行为，必然会在犯罪现场直接或间接地作用于被侵害客体及其周围环境，会自觉或不自觉地遗留下痕迹。</p>
+<p>侧信道信息就是这样，密码算法在实现过程中、芯片运行过程中，总是要和物理世界产生信息交互的。而防止侧信道攻击的思想，就是尽可能地减弱这些侧信道信息和密码算法关键数据的相关性。</p>
+<h2 id="简单能量分析防护"><a href="#简单能量分析防护" class="headerlink" title="简单能量分析防护"></a>简单能量分析防护</h2><p>讲回本篇提到的这个简单能量分析，因为程序中分支执行的不一致，带来微操作的差别，给了直接分析可乘之机，而且密钥的恢复效率比密码学分析方法高的太多了。上述微操作和能量波形的匹配，也是可以交给工具去做的。首先对原始波形滤波，然后挑选有意义的波形，做波切割（对应微操作），这一过程人眼参与的比较多。然后设定标准段，与其他切割段作对比，恢复密钥。</p>
+<p>要防护这类攻击，也比较简单，首先，并行执行就给攻击带来了很多难度；其次，可以讲不同分支对齐，甚至减少关键部分运算的分支。</p>
+
       
-    </p></div>
+    </div>
     <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #636363;font-size:14px;letter-spacing: 10px">本文结束啦<i class="fa fa-bell"></i>感谢您的阅读</div>
+    
+</div>
   
   </div>
     
@@ -429,358 +494,58 @@
 
     
 
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Shining Star
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/08/19/SCA：简单能量分析攻击/" title="SCA：简单能量分析攻击">http://yoursite.com/2019/08/19/SCA：简单能量分析攻击/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/综合与DC(一)：基本概念/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shining Star">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/love_head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="博观约取，厚积薄发">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/15/综合与DC(一)：基本概念/" itemprop="url">综合与DC(一)：基本概念</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-15T21:17:00+08:00">
-                2019-07-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/EE笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">EE笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/密码算法，硬件攻防/" rel="tag"><i class="fa fa-tag"></i> 密码算法，硬件攻防</a>
           
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/07/15/综合与DC(一)：基本概念/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/15/综合与DC(一)：基本概念/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/07/15/综合与DC(一)：基本概念/" class="leancloud_visitors" data-flag-title="综合与DC(一)：基本概念">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-		
+      
       
       
 
       
-        
-          <p>​    写一个系列吧，从综合与DC写起，算是前端的一部分。后边会跟上后端，以及前端的一些经典电路、模块的设计，EDA工具的使用。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/07/15/综合与DC(一)：基本概念/" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/15/综合与DC(一)：基本概念/" rel="next" title="综合与DC(一)：基本概念">
+                <i class="fa fa-chevron-left"></i> 综合与DC(一)：基本概念
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    <div>
-  
-  </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/14/博客图床搭建/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shining Star">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/love_head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="博观约取，厚积薄发">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/14/博客图床搭建/" itemprop="url">博客图床搭建</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-14T09:50:00+08:00">
-                2019-07-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具使用/" itemprop="url" rel="index">
-                    <span itemprop="name">工具使用</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/07/14/博客图床搭建/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/14/博客图床搭建/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/07/14/博客图床搭建/" class="leancloud_visitors" data-flag-title="博客图床搭建">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-		
-      
       
 
       
-        
-          <p>​    因为<a href="http://yoursite.com/2019/03/21/hexo入坑-图片上传/">上次</a>申请的七牛云存储空间是一个测试域名，一定时长后，域名就给失效了，所以原来博客里边素的没有一张图了（<del>虽然一共也没有几篇博客</del>）。因为不能上图，所以博客停更了几个月，这次趁着有时间，回来又申请了一个阿里云的OSS，这次主要记录一下图床的搭建吧！
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/07/14/博客图床搭建/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    <div>
-  
-  </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -790,691 +555,11 @@
   </article>
 
 
-    
+
+    <div class="post-spread">
       
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/15/公钥加密基本概念（一）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shining Star">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/love_head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="博观约取，厚积薄发">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/15/公钥加密基本概念（一）/" itemprop="url">公钥加密基本概念（一）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-15T19:56:48+08:00">
-                2019-04-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/公钥密码学/" itemprop="url" rel="index">
-                    <span itemprop="name">公钥密码学</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/04/15/公钥加密基本概念（一）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/15/公钥加密基本概念（一）/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/04/15/公钥加密基本概念（一）/" class="leancloud_visitors" data-flag-title="公钥加密基本概念（一）">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-		
-      
-      
-
-      
-        
-          <h1 id="公钥密码学"><a href="#公钥密码学" class="headerlink" title="公钥密码学"></a>公钥密码学</h1><p>参考知乎文章<a href="https://zhuanlan.zhihu.com/p/45958608" target="_blank" rel="noopener">《公钥密码学》</a></p>
-<p>​    当代密码学的核心是公钥密码学。我们先来聊聊公钥密码学的定义，然后介绍一下它的两大应用，最后简要介绍一下两个公钥密码学的算法。Peter 写本文的目的是梳理清楚学习密码学的大思路，以便在看文档的时候，遇到椭圆曲线，RSA ，加密通信，数字签名这些术语的时候，起码知道它们的大致归属。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/04/15/公钥加密基本概念（一）/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    <div>
-  
+    </div>
   </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/09/实习生/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shining Star">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/love_head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="博观约取，厚积薄发">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/09/实习生/" itemprop="url">实习生</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-09T20:41:51+08:00">
-                2019-04-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/杂谈/" itemprop="url" rel="index">
-                    <span itemprop="name">杂谈</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/04/09/实习生/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/09/实习生/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/04/09/实习生/" class="leancloud_visitors" data-flag-title="实习生">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-		
-      
-      
-
-      
-        
-          <p>​    最近一直都没有更新，一方面杂事太多，一方面心情太差，被一些事情折磨得感觉每分钟都很煎熬。不说这些了，说自己的新身份：实习生。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/04/09/实习生/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    <div>
-  
-  </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/21/hexo入坑-图片上传/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shining Star">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/love_head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="博观约取，厚积薄发">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/21/hexo入坑-图片上传/" itemprop="url">hexo入坑-图片上传</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-21T11:01:47+08:00">
-                2019-03-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具使用/" itemprop="url" rel="index">
-                    <span itemprop="name">工具使用</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/21/hexo入坑-图片上传/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/21/hexo入坑-图片上传/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/03/21/hexo入坑-图片上传/" class="leancloud_visitors" data-flag-title="hexo入坑-图片上传">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-		
-      
-      
-
-      
-        
-          <p>​    这两天对markdown有点着魔，连做学习笔记都在用Typora写markdown了。本来，Typora插入图片是很方便的，可是偏偏自己还又入了hexo的坑。单纯的用Typora写文章的话，无论插入本地图片还是网络图片都是没问题的，如果需要hexo生成html的话，本地图片上传就会出现一些“坑”。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/03/21/hexo入坑-图片上传/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    <div>
-  
-  </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/19/开“更”大吉/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shining Star">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/love_head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="博观约取，厚积薄发">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/19/开“更”大吉/" itemprop="url">开“更”大吉</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-19T21:31:57+08:00">
-                2019-03-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/杂谈/" itemprop="url" rel="index">
-                    <span itemprop="name">杂谈</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/19/开“更”大吉/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/19/开“更”大吉/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/03/19/开“更”大吉/" class="leancloud_visitors" data-flag-title="开“更”大吉">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-		
-      
-      
-
-      
-        
-          <h1 id="我的个人博客"><a href="#我的个人博客" class="headerlink" title="我的个人博客"></a>我的个人博客</h1><p>​    从今天起，本站就作为本人的个人博客使用啦。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/03/19/开“更”大吉/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    <div>
-  
-  </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -1482,6 +567,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -1502,8 +594,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1593,6 +694,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-理论理解"><span class="nav-text">1. 理论理解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-侧信道"><span class="nav-text">1.1 侧信道</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-简单能量分析攻击SPA"><span class="nav-text">1.2 简单能量分析攻击SPA</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-攻击实验"><span class="nav-text">2. 攻击实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-目标算法：DES中的置换操作"><span class="nav-text">2.1 目标算法：DES中的置换操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-目标待攻击平台"><span class="nav-text">2.2 目标待攻击平台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-攻击步骤"><span class="nav-text">2.3 攻击步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#建模板观察"><span class="nav-text">建模板观察</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#密钥破解"><span class="nav-text">密钥破解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-简单能量分析攻击的其他示例"><span class="nav-text">3 简单能量分析攻击的其他示例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-RSA算法的简单能量分析"><span class="nav-text">3.1 RSA算法的简单能量分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思考"><span class="nav-text">思考</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#不可避免"><span class="nav-text">不可避免</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单能量分析防护"><span class="nav-text">简单能量分析防护</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1801,6 +918,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
