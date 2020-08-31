@@ -91,7 +91,7 @@
 <meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/DC3.png">
 <meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/DC2.png">
 <meta property="og:image" content="https://double-image.oss-cn-beijing.aliyuncs.com/DC读入文件.png">
-<meta property="og:updated_time" content="2019-07-15T13:20:54.316Z">
+<meta property="og:updated_time" content="2019-12-01T02:05:22.976Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="综合与DC(一)：基本概念">
 <meta name="twitter:description" content="​    写一个系列吧，从综合与DC写起，算是前端的一部分。后边会跟上后端，以及前端的一些经典电路、模块的设计，EDA工具的使用。">
@@ -425,7 +425,7 @@
 <li>如果设计未能满足功能要求,  我们必须修改设计代码以及重复设计开发和功能仿真. 继续设计开发和功能仿真直至设计功能正确及满足小于 10%偏差的时序目标.</li>
 </ul>
 </li>
-<li>使用 DC 完成设计的综合并满足设计目标.这个过程包括三个步骤，即综合=转化+逻辑优化+映射，首先将 RTL 源代码转化为通用的布尔等式，然后设计的约束对电路进行逻辑综合和优化，使电路能满足设计的目标或者约束，最后使用目标工艺库的逻辑单元映射成门级网表，在将设计综合成门级网表之后,要验证此时的设计是否满足设计目标.如果不能满足设计目标,此时需要产生及分析报告确定问题及解决问题.</li>
+<li>使用 DC 完成设计的综合并满足设计目标.这个过程包括三个步骤，即<strong>综合=转化+逻辑优化+映射</strong>，首先将 RTL 源代码转化为通用的布尔等式（Gtech），然后设计的约束对电路进行逻辑综合和优化，使电路能满足设计的目标或者约束，最后使用目标工艺库的逻辑单元映射成门级网表，在将设计综合成门级网表之后,要验证此时的设计是否满足设计目标.如果不能满足设计目标,此时需要产生及分析报告确定问题及解决问题.</li>
 <li>当设计满足功能、时序以及其他的设计目标的时候,需要执行物理层设计最后分析物理层设计的性能，也就是使用DC的拓扑模式，加入floorplan的物理信息后进行综合分析设计的性能。如果结果未能满足设计目标,应返回第三步.如果满足设计目标,则本部分设计周期完成.</li>
 </ol>
 <h2 id="2-2-图2"><a href="#2-2-图2" class="headerlink" title="2.2 图2"></a>2.2 图2</h2><p><img src="https://double-image.oss-cn-beijing.aliyuncs.com/DC3.png" alt="DC3"></p>
@@ -458,7 +458,7 @@
 <h3 id="2-3-7-编译"><a href="#2-3-7-编译" class="headerlink" title="2.3.7 编译"></a>2.3.7 编译</h3><p>用 Compile 命令执行综合与优化过程，还可以利用一些选项指导编译和优化过程。</p>
 <h3 id="2-3-8-分析及解决设计中存在的问题"><a href="#2-3-8-分析及解决设计中存在的问题" class="headerlink" title="2.3.8 分析及解决设计中存在的问题"></a>2.3.8 分析及解决设计中存在的问题</h3><p>DC  可以产生一些报告以反映设计的综合和优化结果，如：时序、面积、约束等报告，这些报告有助于分析和解决设计中存在的问题以改善综合结果，我们还可以利用 check_design 命令检验综合的设计的一致性。</p>
 <h3 id="2-3-9-导出设计数据"><a href="#2-3-9-导出设计数据" class="headerlink" title="2.3.9 导出设计数据"></a>2.3.9 导出设计数据</h3><p>DC 不会自动存储综合后的设计结果，因而需要在离开 DC 时手动存储设计数据。比如存储网表、延时信息等数据文件。</p>
-<h2 id="3-Reference"><a href="#3-Reference" class="headerlink" title="3. Reference"></a>3. Reference</h2><p>[1]：<a href="https://www.cnblogs.com/IClearner/p/6618992.html" target="_blank" rel="noopener">Tcl与Design Compiler （三）——DC综合的流程</a></p>
+<h1 id="3-Reference"><a href="#3-Reference" class="headerlink" title="3. Reference"></a>3. Reference</h1><p>[1]：<a href="https://www.cnblogs.com/IClearner/p/6618992.html" target="_blank" rel="noopener">Tcl与Design Compiler （三）——DC综合的流程</a></p>
 <p>基本概念都是来自这位同行的说法，只是对一些地方加了些自己的见解。下一篇中会补充上自己原来综合用的脚本。</p>
 
       
@@ -527,8 +527,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/19/SCA：简单能量分析攻击/" rel="prev" title="SCA：简单能量分析攻击">
-                SCA：简单能量分析攻击 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/08/01/密钥管理/" rel="prev" title="密钥管理">
+                密钥管理 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -611,7 +611,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -622,7 +622,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -633,7 +633,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -694,7 +694,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-前言"><span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-逻辑综合概述"><span class="nav-text">2. 逻辑综合概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-图1"><span class="nav-text">2.1 图1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-图2"><span class="nav-text">2.2 图2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-图3"><span class="nav-text">2.3 图3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-准备设计文件，coding工作。"><span class="nav-text">2.3.1 准备设计文件，coding工作。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-指定库文件、工作目录等。-补充命令示例"><span class="nav-text">### 2.3.2 指定库文件、工作目录等。==补充命令示例==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-3-读入设计。"><span class="nav-text">2.3.3 读入设计。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-4-定义设计环境。"><span class="nav-text">2.3.4 定义设计环境。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-5-定义设计约束。"><span class="nav-text">2.3.5 定义设计约束。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-6-选择编译策略。"><span class="nav-text">2.3.6 选择编译策略。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-7-编译"><span class="nav-text">2.3.7 编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-8-分析及解决设计中存在的问题"><span class="nav-text">2.3.8 分析及解决设计中存在的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-9-导出设计数据"><span class="nav-text">2.3.9 导出设计数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Reference"><span class="nav-text">3. Reference</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-前言"><span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-逻辑综合概述"><span class="nav-text">2. 逻辑综合概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-图1"><span class="nav-text">2.1 图1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-图2"><span class="nav-text">2.2 图2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-图3"><span class="nav-text">2.3 图3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-准备设计文件，coding工作。"><span class="nav-text">2.3.1 准备设计文件，coding工作。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-指定库文件、工作目录等。-补充命令示例"><span class="nav-text">### 2.3.2 指定库文件、工作目录等。==补充命令示例==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-3-读入设计。"><span class="nav-text">2.3.3 读入设计。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-4-定义设计环境。"><span class="nav-text">2.3.4 定义设计环境。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-5-定义设计约束。"><span class="nav-text">2.3.5 定义设计约束。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-6-选择编译策略。"><span class="nav-text">2.3.6 选择编译策略。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-7-编译"><span class="nav-text">2.3.7 编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-8-分析及解决设计中存在的问题"><span class="nav-text">2.3.8 分析及解决设计中存在的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-9-导出设计数据"><span class="nav-text">2.3.9 导出设计数据</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Reference"><span class="nav-text">3. Reference</span></a></li></ol></div>
             
 
           </div>
@@ -724,7 +724,7 @@
         ﻿<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
 
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="heart">
     <i class="fa fa-heart"></i>
   </span>
